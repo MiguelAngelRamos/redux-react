@@ -12,7 +12,7 @@ const tasksSlice = createSlice({
       state.tasks.push(action.payload)
     },
     deleteTask: (state, action) => {
-      state.tasks.filter(task => task.id !== action.payload)
+      state.tasks = state.tasks.filter(task => task.id !== action.payload)
     },
   }
 });
